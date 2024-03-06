@@ -9,6 +9,11 @@ let birthYear = 1928;
 let person = [firstName, lastName, knownFor, birthYear];
 
 printButton.addEventListener('click', () => {
+  person.forEach((element)=>{
+    let li = document.createElement("li");
+    li.innerHTML = element;
+    personList.appendChild(li);
+  })
 // 1. Use a forEach loop to append the items in the `person` array to the "person" unordered list.
 //  - Select the array.
 //  - Add your forEach loop.
